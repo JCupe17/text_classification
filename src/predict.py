@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+from tqdm import tqdm
 from torch.utils.data import DataLoader
 
 import src.constants as const
@@ -39,7 +40,7 @@ def predict_dataframe(model, tokenizer, df) -> list[str]:
 
     predictions = []
 
-    for data in dataloader:
+    for data in tqdm(dataloader):
 
         # Moving to GPU if available
         mask = data['attention_mask'].squeeze(1).to(DEVICE)

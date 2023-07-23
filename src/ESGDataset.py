@@ -19,4 +19,4 @@ class ESGDataset(torch.utils.data.Dataset):
         return item
 
     def __len__(self):
-        return len(self.texts)
+        return len(self.labels)

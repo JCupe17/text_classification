@@ -13,3 +13,7 @@ ipython_config.py
 # Other files
 *.csv
 *.pdf
+*.json
+*.bin
+
+.DS_store
